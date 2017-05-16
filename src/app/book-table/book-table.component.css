@@ -1,0 +1,24 @@
+.collapsible-header {
+  height: 45px;
+}
+
+.header-title {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.title {
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #039be5;
+}
+
+.price {
+  float: right;
+}

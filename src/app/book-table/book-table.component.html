@@ -1,0 +1,14 @@
+<ul class="collapsible popout" data-collapsible="accordion">
+  <li *ngFor="let result of author.results">
+    <div class="collapsible-header">
+      <span class="header-title">{{result.trackName}}</span>
+    </div>
+
+    <div class="collapsible-body">
+      <h5 class="title" (click)="open(result.trackViewUrl)">{{result.trackName}}</h5>
+      <span class="price"><small>Price: <b>{{result.formattedPrice}}</b></small></span><br/><br/>
+      <span [innerHTML]="result.description"></span>
+    </div>
+
+  </li>
+</ul>

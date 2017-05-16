@@ -1,0 +1,32 @@
+<div class="row">
+  <!-- TABS -->
+  <div class="col s12">
+    <ul class="tabs">
+      <li class="tab col s3"><a class="active" href="#dickens">Dickens</a></li>
+      <li class="tab col s3"><a href="#hemingway">Hemingway</a></li>
+      <li class="tab col s3"><a href="#shakespeare">Shakespeare</a></li>
+    </ul>
+  </div>
+
+  <!-- TAB CONTENT -->
+  <div id="dickens" class="col s12" [ngSwitch]="errorMessageDickens === ''">
+    <app-book-table *ngSwitchCase="true" [author]="dickens"></app-book-table>
+    <div *ngSwitchCase="false" class="error-message">
+      {{errorMessage}} <br/> {{errorMessageDickens}}
+    </div>
+  </div>
+
+  <div id="hemingway" class="col s12" [ngSwitch]="errorMessageHemingway === ''">
+    <app-book-table *ngSwitchCase="true" [author]="hemingway"></app-book-table>
+    <div *ngSwitchCase="false" class="error-message">
+      {{errorMessage}} <br/> {{errorMessageHemingway}}
+    </div>
+  </div>
+
+  <div id="shakespeare" class="col s12" [ngSwitch]="errorMessageShakespeare === ''">
+    <app-book-table *ngSwitchCase="true" [author]="shakespeare"></app-book-table>
+    <div *ngSwitchCase="false" class="error-message">
+      {{errorMessage}} <br/> {{errorMessageShakespeare}}
+    </div>
+  </div>
+</div>
